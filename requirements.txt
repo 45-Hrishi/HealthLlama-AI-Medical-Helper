@@ -2,3 +2,5 @@ ctransformer==0.2.5
 sentense_transformers==2.2.2
 pinecone-client
 langchain==0.0.255
+
+-e .
