@@ -1,6 +1,8 @@
-ctransformer==0.2.5
-sentense_transformers==2.2.2
-pinecone-client
+ctransformers
+sentence-transformers==3.2.0
+pinecone
 langchain==0.0.255
+langchain_community
+pypdf
 
 -e .
