@@ -19,8 +19,9 @@ def get_response(user_input):
     retriever = vector_store.as_retriever(search_kwargs={'k':2})
     llama_model = load_model("model/llama-2-7b.Q4_K_M.gguf")
     prompt = load_prompt("prompts.md")
+    prompt
     
     question_answer_chain = create_stuff_documents_chain(llama_model, prompt)
     rag_chain = create_retrieval_chain(retriever, question_answer_chain)
     results = rag_chain.invoke({"input": f"{user_input}"})
-    return results["answer"]
+    return results

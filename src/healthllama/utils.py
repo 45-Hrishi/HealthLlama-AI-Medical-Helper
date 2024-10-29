@@ -2,7 +2,7 @@ import os
 import torch
 from dotenv import load_dotenv
 from langchain.prompts import PromptTemplate
-from langchain_community.llms import CTransformers
+from langchain_community.llms.ctransformers import CTransformers
 from langchain.embeddings import HuggingFaceEmbeddings
 from healthllama.document_processor import get_extracted_text
 from langchain_text_splitters import RecursiveCharacterTextSplitter
@@ -43,7 +43,7 @@ def get_vector_store(index_name):
 def load_prompt(file_path):
     with open(file_path, 'r') as file:
         prompt_template = file.read()
-        prompt = PromptTemplate.from_template(prompt_template)
+    prompt = PromptTemplate.from_template(prompt_template)
     return prompt
 
 def load_model(model_path):
